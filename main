@@ -1,0 +1,318 @@
+ 1 #include<stdio.h>
+  2 void main()
+  3 {
+  4         int i,j,k=0,r,c,l=1,y;
+  5         int d[3][3];
+  6         int z[3][3];
+  7         for(i=0;i<3;i++)
+  8         {
+  9                 for(j=0;j<3;j++)
+ 10                 {
+ 11                         d[i][j]='-';
+ 12                         z[i][j]=l;
+ 13                         l++;
+ 14                 }
+ 15         }
+ 16
+ 17
+ 18                 for(i=0;i<3;i++)
+ 19                 {
+ 20                         for(j=0;j<3;j++)
+ 21                                 printf("%c ",d[i][j]);
+ 22                         printf("            ");
+ 23                         for(j=0;j<3;j++)
+ 24                                 printf("%d ",z[i][j]);
+ 25                         printf("\n");
+ 26                 }
+ 27
+ 28                     printf("\033[31;4;5m GAME BEGIN \033[0m\n");
+ 29         for(k=0;k<9;k++)
+ 30         {
+ 31                 if(k%2)
+ 32                 {
+ 33                         printf("\n\nenter player 'B' data\n\n");
+ 34                         scanf("%d",&y);
+ 35                         switch(y)
+ 36                         {
+ 37                                 case 1:
+ 38                                         if(d[0][0]=='-')
+ 39                                                 d[0][0]='o';
+ 40                                         else
+ 41                                         {
+ 42                                                 printf("\nalready value is there\n\n");
+ 43                                                 k--;
+ 44                                         }
+ 45                                         break;
+ 46                                 case 2:
+ 47                                         if(d[0][1]=='-')
+ 48                                                 d[0][1]='o';
+ 49                                         else
+ 50                                         {
+ 51                                                 printf("\nalready value is there\n\n");
+ 52                                                 k--;
+ 53                                         }
+ 54                                         break;
+ 55                                 case 3:
+ 56                                         if(d[0][2]=='-')
+ 57                                                 d[0][2]='o';
+ 58                                         else
+ 59                                         {
+ 60                                                 printf("\nalready value is there\n\n");
+ 61                                                 k--;
+ 62                                         }
+ 63                                         break;
+ 64                                 case 4:
+ 65                                         if(d[1][0]=='-')
+ 66                                                 d[1][0]='o';
+ 67                                         else
+ 68                                         {
+ 69                                                 printf("\nalready value is there\n\n");
+ 70                                                 k--;
+ 71                                         }
+ 72                                         break;
+ 73                                 case 5:
+ 74                                         if(d[1][1]=='-')
+ 75                                                 d[1][1]='o';
+ 76                                         else
+ 77                                         {
+ 78                                                 printf("\nalready value is there\n\n");
+ 79                                                 k--;
+ 80                                         }
+ 81                                         break;
+ 82                                 case 6:
+ 83                                         if(d[1][2]=='-')
+ 84                                                 d[1][2]='o';
+ 85                                         else
+ 86                                         {
+ 87                                                 printf("\nalready value is there\n\n");
+ 88                                                 k--;
+ 89                                         }
+ 90                                         break;
+ 91                                 case 7:
+ 92                                         if(d[2][0]=='-')
+ 93                                                 d[2][0]='o';
+ 94                                         else
+ 95                                         {
+ 96                                                 printf("\nalready value is there\n\n");
+ 97                                                 k--;
+ 98                                         }
+ 99                                         break;
+100                                 case 8:
+101                                         if(d[2][1]=='-')
+102                                                 d[2][1]='o';
+103                                         else
+104                                         {
+105                                                 printf("\nalready value is there\n\n");
+106                                                 k--;
+107                                         }
+108                                         break;
+109                                 case 9:
+110                                         if(d[2][2]=='-')
+111                                                 d[2][2]='o';
+112                                         else
+113                                         {
+114                                                 printf("\nalready value is there\n\n");
+115                                                 k--;
+116                                         }
+117                                         break;
+118                                 default:{
+119
+120                                                 printf("\033[31;4;5m entry is wrong \033[0m\n");
+121                                                 k--;
+122                                         }
+123                         }
+124                 }
+125                 else
+126                 {
+127                         printf("enter player 'A' data\n");
+128                         scanf("%d",&y);
+129                         switch(y)
+130                         {
+131                                 case 1:
+132                                         if(d[0][0]=='-')
+133                                                 d[0][0]='*';
+134                                         else
+135                                         {
+136                                                 printf("\nalready value is there\n\n");
+137                                                 k--;
+138                                         }
+139                                         break;
+140                                 case 2:
+141                                         if(d[0][1]=='-')
+142                                                 d[0][1]='*';
+143                                         else
+144                                         {
+145                                                 printf("\nalready value is there\n\n");
+146                                                 k--;
+147                                         }
+148                                         break;
+149                                 case 3:
+150                                         if(d[0][2]=='-')
+151                                                 d[0][2]='*';
+152                                         else
+153                                         {
+154                                                 printf("\nalready value is there\n\n");
+155                                                 k--;
+156                                         }
+157                                         break;
+158                                 case 4:
+159                                         if(d[1][0]=='-')
+160                                                 d[1][0]='*';
+161                                         else
+162                                         {
+163                                                 printf("\nalready value is there\n\n");
+164                                                 k--;
+165                                         }
+166                                         break;
+167                                 case 5:
+168                                         if(d[1][1]=='-')
+169                                                 d[1][1]='*';
+170                                         else
+171                                         {
+172                                                 printf("\nalready value is there\n\n");
+173                                                 k--;
+174                                         }
+175                                         break;
+176                                 case 6:
+177                                         if(d[1][2]=='-')
+178                                                 d[1][2]='*';
+179                                         else
+180                                         {
+181                                                 printf("\nalready value is there\n\n");
+182                                                 k--;
+183                                         }
+184                                         break;
+185                                 case 7:
+186                                         if(d[2][0]=='-')
+187                                                 d[2][0]='*';
+188                                         else
+189                                         {
+190                                                 printf("\nalready value is there\n\n");
+191                                                 k--;
+192                                         }
+193                                         break;
+194                                 case 8:
+195                                         if(d[2][1]=='-')
+196                                                 d[2][1]='*';
+197                                         else
+198                                         {
+199                                                 printf("\nalready value is there\n\n");
+200                                                 k--;
+201                                         }
+202                                         break;
+203                                 case 9:
+204                                         if(d[2][2]=='-')
+205                                                 d[2][2]='*';
+206                                         else
+207                                         {
+208                                                 printf("\nalready value is there\n\n");
+209                                                 k--;
+210                                         }
+211                                         break;
+212                                 default:
+213                                         {
+214                                                 printf("\033[31;4;5m entry is wrong \033[0m\n");
+215                                                 k--;
+216                                         }
+217                         }
+218                 }
+219                 for(i=0;i<3;i++)
+220                 {
+221                         for(j=0;j<3;j++)
+222                                 printf("%c ",d[i][j]);
+223                         printf("            ");
+224                         for(j=0;j<3;j++)
+225                                 printf("%d ",z[i][j]);
+226                         printf("\n");
+227                 }
+228
+229
+230                 if(d[0][0]=='' && d[0][1]=='' && d[0][2]=='*')
+231                 {
+232                     printf("\033[31;4;5m player a win \033[0m\n");
+233                     return;
+234                 }
+235
+236                 else if(d[1][0]=='' && d[1][1]=='' && d[1][2]=='*')
+237                 {
+238                     printf("\033[31;4;5m player a win \033[0m\n");
+239                     return;
+240                 }
+241
+242                 else if(d[2][0]=='' && d[2][1]=='' && d[2][2]=='*')
+243                 {
+244                     printf("\033[31;4;5m player a win \033[0m\n");
+245                     return;
+246                 }
+247
+248                 else if(d[0][0]=='' && d[1][0]=='' && d[2][0]=='*')
+249                 {
+250                     printf("\033[31;4;5m player a win \033[0m\n");
+251                     return;
+252                 }
+253                 else if(d[0][1]=='' && d[1][1]=='' && d[2][1]=='*')
+254                 {
+255                     printf("\033[31;4;5m player a win \033[0m\n");
+256                     return;
+257                 }
+258                 else if(d[0][2]=='' && d[1][2]=='' && d[2][2]=='*')
+259                 {
+260                     printf("\033[31;4;5m player a win \033[0m\n");
+261                     return;
+262                 }
+263                 else if(d[0][0]=='' && d[1][1]=='' && d[2][2]=='*')
+264                 {
+265                     printf("\033[31;4;5m player a win \033[0m\n");
+266                     return;
+267                 }
+268                 else if(d[0][2]=='' && d[1][1]=='' && d[2][0]=='*')
+269                 {
+270                     printf("\033[31;4;5m player a win \033[0m\n");
+271                     return;
+272                 }
+273                 else if(d[0][0]=='o' && d[0][1]=='o' && d[0][2]=='o')
+274                 {
+275                     printf("\033[31;4;5m player b win \033[0m\n");
+276                     return;
+277                 }
+278                 else if(d[1][0]=='o' && d[1][1]=='o' && d[1][2]=='o')
+279                 {
+280                     printf("\033[31;4;5m player b win \033[0m\n");
+281                     return;
+282                 }
+283                 else if(d[2][0]=='o' && d[2][1]=='o' && d[2][2]=='o')
+284                 {
+285                     printf("\033[31;4;5m player b win \033[0m\n");
+286                     return;
+287                 }
+288                 else if(d[0][0]=='o' && d[1][0]=='o' && d[2][0]=='o')
+289                 {
+290                     printf("\033[31;4;5m player b win \033[0m\n");
+291                     return;
+292                 }
+293                 else if(d[0][1]=='o' && d[1][1]=='o' && d[2][1]=='o')
+294                 {
+295                     printf("\033[31;4;5m player b win \033[0m\n");
+296                     return;
+297                 }
+298                 else if(d[0][2]=='o' && d[1][2]=='o' && d[2][2]=='o')
+299                 {
+300                     printf("\033[31;4;5m player b win \033[0m\n");
+301                     return;
+302                 }
+303                 else if(d[0][0]=='o' && d[1][1]=='o' && d[2][2]=='o')
+304                 {
+305                     printf("\033[31;4;5m player b win \033[0m\n");
+306                     return;
+307                 }
+308                 else if(d[0][2]=='o' && d[1][1]=='o' && d[2][0]=='o')
+309                 {
+310                     printf("\033[31;4;5m player b win \033[0m\n");
+311                     return;
+312                 }
+313                 else
+314                         printf(" ");
+315         }
+316
+317 printf("\033[31;4;5m game over \033[0m\n");
+318 }
